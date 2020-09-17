@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7836820504472621315}
   - component: {fileID: 6838763139963449150}
   - component: {fileID: 5940743380517240295}
+  - component: {fileID: 2680215200382210629}
   m_Layer: 0
   m_Name: AcidPool
   m_TagString: Untagged
@@ -90,7 +91,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7930744102677403712}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -4817,3 +4818,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2680215200382210629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7930744102677403712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6621847ee2864448d5f4b644444bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
