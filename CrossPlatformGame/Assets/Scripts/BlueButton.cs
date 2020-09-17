@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PinkButton : MonoBehaviour
+public class BlueButton : MonoBehaviour
 {
-    public GameObject blueButton;
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            //ACTIVATES BLUE BUTTON AND GETS RID OF PINK BUTTON
-            blueButton.SetActive(true);
+            //WIN
             gameObject.SetActive(false);
         }
     }

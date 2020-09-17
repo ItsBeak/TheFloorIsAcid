@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject[] m_Characters;
+    public GameObject[] m_Buttons;
 
     public enum GameState
     {
@@ -41,10 +43,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //SWITCHES BETWEEN GAMESTATES
         switch (m_GameState)
         {
             case GameState.Start:
-                if (Input.GetKeyUp(KeyCode.Return) == true) // different for mobile?
+                //DIFFERENT FOR MOBILE BUT MAY CHANGE TO MENU/SCENE
+                if (Input.GetKeyUp(KeyCode.Return) == true)
                 {
                     //
                     m_GameState = GameState.Playing;
@@ -63,6 +67,11 @@ public class GameManager : MonoBehaviour
                     isGameOver = true;
                 }
 
+                if (IsBlueButtonPressed() == true)
+                {
+                    isGameOver = true;
+                }
+
                 if (isGameOver == true)
                 {
                     m_GameState = GameState.GameOver;
@@ -71,11 +80,11 @@ public class GameManager : MonoBehaviour
 
                     if (IsPlayerDead() == true)
                     {
-                        //
+                        //lose
                     }
-                    else
+                    else if (IsBlueButtonPressed() == true)
                     {
-                        //
+                        //win
                     }
                 }
                 break;
@@ -85,25 +94,31 @@ public class GameManager : MonoBehaviour
                     m_Characters[i].SetActive(false);
                 }
 
-                if (Input.GetKeyUp(KeyCode.Return) == true)
-                {
-                    m_GameState = GameState.Playing;
-                    //
+                //CHANGE SCENE
+                //SceneManager.LoadScene("gameOver");
 
-                    for (int i = 0; i < m_Characters.Length; i++)
-                    {
-                        m_Characters[i].SetActive(true);
-                    }
-                }
+                //NOT SURE IF NEEDED ANYMORE BECAUSE OF CHANGE SCENE
+                //if (Input.GetKeyUp(KeyCode.Return) == true)
+                //{
+                //    m_GameState = GameState.Playing;
+                //    //
+                //
+                //    for (int i = 0; i < m_Characters.Length; i++)
+                //    {
+                //        m_Characters[i].SetActive(true);
+                //    }
+                //}
                 break;
         }
 
+        //QUIT OR PAUSE NOT SURE IF CHANGE SCENE
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            Application.Quit();//change to pause?
+            Application.Quit();
         }
     }
 
+    //CHECKS IF PLAYER IS DEAD
     private bool IsPlayerDead()
     {
         for (int i = 0; i < m_Characters.Length; i++)
@@ -118,6 +133,17 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
+    //CHECKS IF BLUE BUTTON IS PRESSED
+    private bool IsBlueButtonPressed()
+    {
+        if (m_Buttons[0].activeSelf == false && m_Buttons[1].activeSelf == false)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    //CODE FOR NEW GAME BUTTON
     public void OnNewGame()
     {
         //
