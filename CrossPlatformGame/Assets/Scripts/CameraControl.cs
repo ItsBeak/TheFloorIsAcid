@@ -10,24 +10,22 @@ public class CameraControl : MonoBehaviour
 
     private Vector3 m_CameraOffset;
 
+    //FINDS WHERE PLAYER SHOULD SPAWN
+    //MAY NEED TO CHANGE FOR SCENE PURPOSES
     private void Awake()
     {
         m_target = GameObject.FindGameObjectWithTag("Player").transform;
     }
+
     // Start is called before the first frame update
     void Start()
     {
         m_CameraOffset = transform.position - m_target.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void LateUpdate()
     {
+        //FOLLOWS PLAYER
         Vector3 newPos = m_target.position + m_CameraOffset;
 
         transform.position = Vector2.Lerp(transform.position, newPos, m_DampTime);
