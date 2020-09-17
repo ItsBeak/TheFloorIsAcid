@@ -344,7 +344,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4016520430308408523}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &554756729
+--- !u!114 &554756724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,11 +356,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5271e1ae6e7c84b9e655700dd24396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 300
+  jumpHeight: 200
   NumberJumps: 0
-  MaxJumps: 1
+  MaxJumps: 2
   isGrounded: 0
---- !u!114 &554756730
+--- !u!114 &554756725
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35175427e83fab44eaa7fed4bfc28b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
 --- !u!1 &566724623
 GameObject:
   m_ObjectHideFlags: 0
