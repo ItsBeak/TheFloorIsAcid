@@ -337,6 +337,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7006028408480239379, guid: 95707c19efe7a224fa0dfda2b0c23f8c,
+        type: 3}
+      propertyPath: blockExtension
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006028408480239379, guid: 95707c19efe7a224fa0dfda2b0c23f8c,
+        type: 3}
+      propertyPath: blockTimer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95707c19efe7a224fa0dfda2b0c23f8c, type: 3}
 --- !u!1 &245166428
@@ -567,6 +577,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006028408480239379, guid: 95707c19efe7a224fa0dfda2b0c23f8c,
+        type: 3}
+      propertyPath: blockExtension
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006028408480239379, guid: 95707c19efe7a224fa0dfda2b0c23f8c,
+        type: 3}
+      propertyPath: blockTimer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95707c19efe7a224fa0dfda2b0c23f8c, type: 3}
@@ -2852,6 +2872,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7006028408480239379, guid: 95707c19efe7a224fa0dfda2b0c23f8c,
+        type: 3}
+      propertyPath: blockExtension
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006028408480239379, guid: 95707c19efe7a224fa0dfda2b0c23f8c,
+        type: 3}
+      propertyPath: blockTimer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95707c19efe7a224fa0dfda2b0c23f8c, type: 3}
 --- !u!1 &1884228452
@@ -3017,7 +3047,7 @@ PrefabInstance:
     - target: {fileID: 7006028408480239379, guid: 95707c19efe7a224fa0dfda2b0c23f8c,
         type: 3}
       propertyPath: blockTimer
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7006028408480239379, guid: 95707c19efe7a224fa0dfda2b0c23f8c,
         type: 3}
