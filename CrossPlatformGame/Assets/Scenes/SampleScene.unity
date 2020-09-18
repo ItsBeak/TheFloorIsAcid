@@ -916,9 +916,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5271e1ae6e7c84b9e655700dd24396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 200
+  jumpHeight: 300
   NumberJumps: 0
-  MaxJumps: 2
+  MaxJumps: 1
   isGrounded: 0
 --- !u!114 &554756730
 MonoBehaviour:
