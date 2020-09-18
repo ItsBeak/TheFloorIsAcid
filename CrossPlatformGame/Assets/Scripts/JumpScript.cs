@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +9,7 @@ public class JumpScript : MonoBehaviour
     public float MaxJumps = 2.0f;
     public bool isGrounded;
     private Rigidbody rb = null;
+    public bool touchJump;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class JumpScript : MonoBehaviour
         }
         if (isGrounded)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded || touchJump && isGrounded)
             {
                 //rb.AddForce(Vector3.up * jumpHeight * Time.deltaTime, ForceMode.Impulse);
                 rb.AddForce(Vector3.up * jumpHeight);
@@ -48,4 +49,12 @@ public class JumpScript : MonoBehaviour
     {
 
     }
-}
+    public void DownJump()
+    {
+        touchJump = true;
+    }
+
+    public void UpJump()
+    {
+        touchJump = false;
+    }

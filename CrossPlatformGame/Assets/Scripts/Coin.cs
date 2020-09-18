@@ -6,12 +6,14 @@ public class Coin : MonoBehaviour
 {
     public float spin = 60f;
     //private float scoreToGive = 100f;
+    public CollectibleCounter counter;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            //
+            
+            counter.collectibles++;
             gameObject.SetActive(false);
         }
     }
