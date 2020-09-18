@@ -57,5 +57,5 @@ public class JumpScript : MonoBehaviour
     public void UpJump()
     {
         touchJump = false;
-    }
+    }
 }

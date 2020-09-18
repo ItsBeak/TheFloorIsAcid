@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4203240371876010811}
   - component: {fileID: 8602651664108104884}
   - component: {fileID: 554756728}
+  - component: {fileID: 554756724}
+  - component: {fileID: 554756730}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -111,3 +113,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 88
   m_CollisionDetection: 0
+--- !u!114 &554756724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715929475636574417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5271e1ae6e7c84b9e655700dd24396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 300
+  NumberJumps: 0
+  MaxJumps: 1
+  isGrounded: 0
+  touchJump: 0
+--- !u!114 &554756730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715929475636574417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35175427e83fab44eaa7fed4bfc28b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  touchRight: 0
+  touchLeft: 0
