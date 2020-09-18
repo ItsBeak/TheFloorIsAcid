@@ -23,7 +23,7 @@ public class BoxExtension : MonoBehaviour
         {
             ExtendAfterDelay();
         }
-        if(!timerReached && timer > blockTimer && isExtended)
+        if(!timerReached && timer > 1 && isExtended)
         {
             ResetAfterDelay();
         }
