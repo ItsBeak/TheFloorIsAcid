@@ -33,10 +33,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < m_Characters.Length; i++)
-        {
-            m_Characters[i].SetActive(false);
-        }
+       // for (int i = 0; i < m_Characters.Length; i++)
+       // {
+       //     m_Characters[i].SetActive(false);
+       // }
 
     }
 
@@ -48,16 +48,15 @@ public class GameManager : MonoBehaviour
         {
             case GameState.Start:
                 //DIFFERENT FOR MOBILE BUT MAY CHANGE TO MENU/SCENE
-                if (Input.GetKeyUp(KeyCode.Return) == true)
-                {
-                    //
-                    m_GameState = GameState.Playing;
 
-                    for (int i = 0; i < m_Characters.Length; i++)
-                    {
-                        m_Characters[i].SetActive(true);
-                    }
+                m_GameState = GameState.Playing;
+
+                for (int i = 0; i < m_Characters.Length; i++)
+                {
+                    m_Characters[i].SetActive(true);
                 }
+
+
                 break;
             case GameState.Playing:
                 bool isGameOver = false;
@@ -74,17 +73,17 @@ public class GameManager : MonoBehaviour
 
                 if (isGameOver == true)
                 {
-                    m_GameState = GameState.GameOver;
+                    //m_GameState = GameState.GameOver;
 
                     //
 
                     if (IsPlayerDead() == true)
                     {
-                        //lose
+                        SceneManager.LoadScene("GameOver");
                     }
                     else if (IsBlueButtonPressed() == true)
                     {
-                        //win
+                        SceneManager.LoadScene("WinScreen");
                     }
                 }
                 break;
